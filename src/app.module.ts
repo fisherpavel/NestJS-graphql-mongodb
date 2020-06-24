@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import {TypeOrmModule} from '@nestjs/typeorm'
 import {GraphQLModule} from '@nestjs/graphql'
+import { LessonModule } from './lesson/lesson.module';
 
 
 @Module({
@@ -18,6 +19,7 @@ import {GraphQLModule} from '@nestjs/graphql'
     GraphQLModule.forRoot({
       autoSchemaFile: true
     }),
+    LessonModule,
     
   ],
   
