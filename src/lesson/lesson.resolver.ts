@@ -10,13 +10,10 @@ export class LessonResolver {
     ){}
 
     @Query(returns => LessonType)
-    lesson(){
-        return {
-            id: 'sd123fd',
-            name: 'Physics class',
-            startDate: (new Date()).toISOString(),
-            endDate:(new Date()).toISOString()
-        }
+    lesson(
+        @Args('id') id: string
+    ){
+        return this.lessonservice.getLesson(id)
     }
 
     @Mutation(returns => LessonType)
