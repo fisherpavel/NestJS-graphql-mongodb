@@ -3,6 +3,7 @@ import {TypeOrmModule} from '@nestjs/typeorm'
 import {GraphQLModule} from '@nestjs/graphql'
 import { LessonModule } from './lesson/lesson.module';
 import { Lesson } from './lesson/lesson.entity';
+import { StudentModule } from './student/student.module';
 
 
 @Module({
@@ -21,6 +22,7 @@ import { Lesson } from './lesson/lesson.entity';
       autoSchemaFile: true
     }),
     LessonModule,
+    StudentModule,
     
   ],
   
